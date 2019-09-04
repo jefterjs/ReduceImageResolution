@@ -36,7 +36,7 @@ def main():
     arqs = [arq for arq in caminhos if os.path.isfile(arq)]
     #  Percorre arquivos do diretório e armazena somente imagens em uma lista
     for arq in arqs:
-        nomearq = arq.replace(dir_imags, '').replace('\\', '')
+        nomearq = arq.replace(dir_imags, '').replace('\\', '').lower()
         if nomearq.find('.jpg') > 0 or nomearq.find('.jpeg') > 0 or nomearq.find('.png') > 0:
             lista.append(nomearq)
     #  Percorre lista fazendo conversão
